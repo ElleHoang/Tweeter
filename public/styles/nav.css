@@ -1,9 +1,10 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
+  background-color: #664a80;
   color: #FFFFFF;
   padding: 1.5em;
+  position: fixed;
 }
 
 nav span {
@@ -14,10 +15,10 @@ nav span {
 .nav-msg {
   float: right;
   text-align: center;
-  justify-content: center;
+  /*justify-content: center; */
 }
 
 .fa-angle-double-down {
-  color: #FF0000;
+  color: #e8ca54;
   font-size: 20px;
 }
