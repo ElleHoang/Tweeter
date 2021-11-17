@@ -27,6 +27,6 @@ body {
 
  main {
    width: 90%;
-   align-content: center;
+   text-align: center;
    background-color: #f4f1ec;
  }
