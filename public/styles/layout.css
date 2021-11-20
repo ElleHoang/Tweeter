@@ -8,6 +8,7 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
 }
 
 /*
@@ -25,8 +26,59 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .main {
-   width: 90%;
-   text-align: center;
-   background-color: #f4f1ec;
+.main {
+  width: 90%;
+  text-align: center;
+  background-color: inherit;
  }
+
+article.tweet{
+  border: solid 3px #545149;
+  margin: 15px 20px 0 20px;
+  padding: 10px;
+ }
+
+.users-avatar {
+  max-height: 75px;
+  width: auto;
+}
+
+article.tweet .tweeter {
+  display: flex;
+  align-items: center;
+}
+
+article.tweet header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ article.tweet .handle {
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.3;
+}
+
+article.tweet-body {
+ /*font-weight: bold;*/
+ font-size: 20px;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border-top: 3px solid #545149;
+  padding: 10px;
+}
+
+.tweet:hover {
+  border-color: #967EB8;
+  box-shadow: 0 0 30px #967EB8;
+}
+
+.fas:hover {
+  color: #955BEC
+}
