@@ -5,6 +5,11 @@ $(document).ready(function() {
   /*$("#tweet-text").keyup(function(e) {
     console.log("You have typed "+$(this).val());
   });*/
+  //#tweet-text - Selector
+  //.keyup - Event
+  //function(e) - Callback
+  //this - represents current object - selector - Tweet-Text
+  
  $("#tweet-text").on("input", function(e){
     const numOfChar = (140 - $(this).val().length);
     
@@ -15,10 +20,5 @@ $(document).ready(function() {
     }
 
   });
-
-  //#tweet-text - Selector
-  //.keyup - Event
-  //function(e) - Callback
-  //this - represents current object - selector - Tweet-Text
   
 });
