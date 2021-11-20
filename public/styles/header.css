@@ -1,4 +1,4 @@
-header {
+#account-user {
   height: 400px;
   width: 100%;
   display: flex;
@@ -7,4 +7,9 @@ header {
   align-items: center;
   background-color: #cface6;
   background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+}
+
+img {
+  height: 250px;
+  width: auto; 
 }
