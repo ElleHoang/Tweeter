@@ -1,12 +1,12 @@
 form {
   width: auto;
+  margin: 0 20px;
  }
 
  label {
-   display: flex;
-   font-weight: bold;
-   font-size: 22px;
-   margin-top: 1em;
+  display: flex;
+  font-weight: bold;
+  margin-top: 1em;
  }
 
 textarea {
