@@ -115,18 +115,17 @@ $(document).ready(function() {
   }
   loadTweets();
   
+$("#err-msg").hide();
   // use jQuery lib to add event listener for submit
   // inside "handler" function, use event.preventDefault() to prevent default form submission behaviour
   $("form").submit(function(event) {
     event.preventDefault();
     const sad = "\u2639";
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
-      alert(`Error: We can not see what you're humming about ${sad}`);
-      return;
+      return $("#err-msg").slideDown().find("p").text(`We can not see what you're humming about.`);
     }
     if ($("#tweet-text").val().length > 140) {
-      alert(`Error: Your humming is way too long ${sad}`)
-      return;
+      return $("#err-msg").slideDown().find("p").text(`Your humming is way too long.`);
     }
     const queryStr = $(this).serialize();
     console.log(queryStr);

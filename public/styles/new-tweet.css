@@ -1,3 +1,25 @@
+#err-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px double #CA0000;
+  margin: 20px 20px 0 20px;
+  color: #CA0000;
+}
+
+article.err-text {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+article.err-text p {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
 form {
   width: auto;
   margin: 0 20px;

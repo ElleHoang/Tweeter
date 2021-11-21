@@ -53,6 +53,13 @@
     <main class="container">
 
       <section class="new-tweet">
+        <div id="err-msg">
+          <article class="err-text">
+            <i class="fas fa-exclamation-circle"></i>
+            <p></p>
+            <i class="fas fa-exclamation-circle"></i>
+          </article>
+        </div>
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
