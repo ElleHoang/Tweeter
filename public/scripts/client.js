@@ -67,15 +67,21 @@ $(document).ready(function() {
     const convertTime = timeago.format(time);
     console.log(convertTime);
     
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+    
     let $tweet =$(`
     <article class="tweet">
     <header>
-    <span class="tweeter"><img class="users-avatar" src=${avatars}>${name}</span>
-    <span class="handle">${handle}</span>
+    <span class="tweeter"><img class="users-avatar" src=${escape(avatars)}>${escape(name)}</span>
+    <span class="handle">${escape(handle)}</span>
     </header>
-    <p class="tweet-body">${text}</p>
+    <p class="tweet-body">${escape(text)}</p>
     <footer class="tweet-info">
-    <span>${convertTime}</span>
+    <span>${escape(convertTime)}</span>
     <div class="icons">
     <i class="fas fa-flag"></i>
     <i class="fas fa-retweet"></i>
@@ -107,7 +113,7 @@ $(document).ready(function() {
       renderTweets(data);
     });
   }
-  //loadTweets();
+  loadTweets();
   
   // use jQuery lib to add event listener for submit
   // inside "handler" function, use event.preventDefault() to prevent default form submission behaviour
