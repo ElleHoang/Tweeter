@@ -20,6 +20,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 20px;
 }
 
 /*
@@ -39,13 +40,15 @@ article.tweet{
  }
 
 .users-avatar {
-  max-height: 75px;
+  max-height: 50px;
   width: auto;
+  margin-right: 10px;
 }
 
 article.tweet .tweeter {
   display: flex;
   align-items: center;
+  font-size: 20px;
 }
 
 article.tweet header {
@@ -61,9 +64,10 @@ article.tweet header {
   opacity: 0.3;
 }
 
-article.tweet-body {
- /*font-weight: bold;*/
- font-size: 20px;
+article.tweet .tweet-body {
+  margin-top: 10px;
+ font-weight: bold;
+ font-size: 16px;
 }
 
 article.tweet footer {
