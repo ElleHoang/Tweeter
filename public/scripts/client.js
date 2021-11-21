@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 // create JS function that generate DOM structure for tweet, given tweet obj
 // take obj directly from initial-tweets.json
 // use jQuery to construct new elements using $ function
@@ -54,7 +55,6 @@ const data = [
 ]
 
 $(document).ready(function() {
-  
   const createTweetElement = function(tweetObj) {
     //const $tweet = $(`<article class="tweet">Hello world</article>`);
     
@@ -83,6 +83,8 @@ $(document).ready(function() {
     </article>
     `);
     return $tweet;
+    // Test / driver code (temp)
+    //console.log($tweet); // to see what it looks like
   };
   
   const renderTweets = function(tweets) {
@@ -94,12 +96,15 @@ $(document).ready(function() {
       $('.all-tweets').append($tweet); // to add to pg to make sure it's got all right elements, classes, etc.
     }
   };
-
   renderTweets(data);
   
-  // Test / driver code (temp)
-  //console.log($tweet); // to see what it looks like
-
-  //return tweet<article> element;
-  // contain entire HTML structure of tweet
+  // use jQuery lib to add event listener for submit
+  // inside "handler" function, use event.preventDefault() to prevent default form submission behaviour
+  $("form").submit(function(event) {
+    event.preventDefault();
+    const queryStr = $(this).serialize();
+    console.log(queryStr);
+    $.ajax("/tweets", { type: "POST", data: queryStr});
+  });
+  
 });
