@@ -95,7 +95,7 @@ $(document).ready(function() {
     // take return value & appends it to tweet container (.all-tweets)
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('.all-tweets').append($tweet); // to add to pg to make sure it's got all right elements, classes, etc.
+      $('.all-tweets').prepend($tweet); // to add to pg to make sure it's got all right elements, classes, etc.
     }
   };
   
@@ -104,11 +104,10 @@ $(document).ready(function() {
   const loadTweets = function () {
     $.ajax("/tweets", { type: "GET"})
     .then(function (data) {
-
       renderTweets(data);
     });
   }
-  loadTweets();
+  //loadTweets();
   
   // use jQuery lib to add event listener for submit
   // inside "handler" function, use event.preventDefault() to prevent default form submission behaviour
@@ -125,7 +124,9 @@ $(document).ready(function() {
     }
     const queryStr = $(this).serialize();
     console.log(queryStr);
-    $.ajax("/tweets", { type: "POST", data: queryStr});
+    $.ajax("/tweets", { type: "POST", data: queryStr})
+    .then(function() {
+      loadTweets();
+    });
   });
-  
 });
