@@ -127,6 +127,7 @@ $(document).ready(function() {
     $.ajax("/tweets", { type: "POST", data: queryStr})
     .then(function() {
       loadTweets();
+      $("#tweet-text").val("");
     });
   });
 });
