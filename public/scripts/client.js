@@ -8,6 +8,7 @@
 // take obj directly from initial-tweets.json
 // use jQuery to construct new elements using $ function
 
+/*
 // Fake data taken from initial-tweets.json
 const data = [
   {
@@ -53,6 +54,7 @@ const data = [
     "created_at": 1461113959088
   }
 ]
+*/
 
 $(document).ready(function() {
   const createTweetElement = function(tweetObj) {
@@ -96,7 +98,16 @@ $(document).ready(function() {
       $('.all-tweets').append($tweet); // to add to pg to make sure it's got all right elements, classes, etc.
     }
   };
-  renderTweets(data);
+  
+  // create loadTweets function responsible for fetching tweets from tweets pg
+  // use jQuery to make req to /tweets & receive array of tweets as JSON
+  const loadTweets = function () {
+    $.ajax("/tweets", { type: "GET"})
+    .then(function (data) {
+      renderTweets(data);
+    });
+  }
+  loadTweets();
   
   // use jQuery lib to add event listener for submit
   // inside "handler" function, use event.preventDefault() to prevent default form submission behaviour
