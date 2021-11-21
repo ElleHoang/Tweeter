@@ -104,6 +104,7 @@ $(document).ready(function() {
   const loadTweets = function () {
     $.ajax("/tweets", { type: "GET"})
     .then(function (data) {
+
       renderTweets(data);
     });
   }
@@ -113,6 +114,15 @@ $(document).ready(function() {
   // inside "handler" function, use event.preventDefault() to prevent default form submission behaviour
   $("form").submit(function(event) {
     event.preventDefault();
+    const sad = "\u2639";
+    if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
+      alert(`Error: We can not see what you're humming about ${sad}`);
+      return;
+    }
+    if ($("#tweet-text").val().length > 140) {
+      alert(`Error: Your humming is way too long ${sad}`)
+      return;
+    }
     const queryStr = $(this).serialize();
     console.log(queryStr);
     $.ajax("/tweets", { type: "POST", data: queryStr});
