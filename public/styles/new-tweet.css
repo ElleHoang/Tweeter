@@ -33,8 +33,8 @@ label {
 
 textarea {
   width: 100%;
-  height: 1.5em;
-  font-size: 18px;
+  height: auto;
+  font-size: 16px;
   background-color: #f4f1ec;
   border: none;
   border-bottom: 3px solid #545149;
@@ -64,4 +64,14 @@ textarea {
 
 .exceed-count {
   color: #CA0000;
+}
+
+/* TABLET LAYOUT */
+@media only screen and (min-width: 768px) {
+  #err-msg {
+    margin: 0 20px 10px;
+  }
+  label {
+    margin-top: 0;
+  }
 }

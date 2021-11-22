@@ -7,7 +7,7 @@
   align-items: center;
   background-color: #cface6;
   background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
-  padding-top: 50px;
+  padding-top: 75px;
 }
 
 img {
@@ -18,3 +18,13 @@ img {
 .user-name {
   font-size: 30px;
  }
+
+/* TABLET LAYOUT */
+@media only screen and (min-width: 768px) {
+  #account-user {
+    height: 300px;
+    width: 50%;
+    margin: 170px 75px 0 50px;
+    padding: 0; 
+  }
+}
