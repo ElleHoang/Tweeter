@@ -66,8 +66,9 @@ article.tweet header {
 
 article.tweet .tweet-body {
   margin-top: 10px;
- font-weight: bold;
- font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  overflow: auto;
 }
 
 article.tweet footer {
@@ -83,6 +84,6 @@ article.tweet footer {
   box-shadow: 0 0 30px #967EB8;
 }
 
-.fas:hover {
+.icons .fas:hover {
   color: #955BEC
 }
