@@ -2,15 +2,7 @@ $(document).ready(function() {
   
   console.log("character counter file is loaded!!!!!");
 
-  /*$("#tweet-text").keyup(function(e) {
-    console.log("You have typed "+$(this).val());
-  });*/
-  //#tweet-text - Selector
-  //.keyup - Event
-  //function(e) - Callback
-  //this - represents current object - selector - Tweet-Text
-  
- $("#tweet-text").on("input", function(e){
+  $("#tweet-text").on("input", function(e) {
     const numOfChar = (140 - $(this).val().length);
     
     if (numOfChar < 0) {
