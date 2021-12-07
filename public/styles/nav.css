@@ -1,11 +1,11 @@
 nav {
   display: flex;
-  height: 100px;
+  height: 75px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: #664a80;
-  color: #FFFFFF;
+  opacity: 0.75;
+  color: #664a80;
   padding: 30px;
   top: 0;
   position: fixed;
@@ -23,13 +23,18 @@ nav span {
 }
 
 .fa-angle-double-down {
-  color: #e8ca54;
   font-size: 20px;
+  color: #e1c13f;
 }
 
 /* TABLET LAYOUT */
 @media only screen and (min-width: 768px) {
   nav {
   background-color: #664a80;
+  color: #FFFFFF;
+  opacity: 1;
+  }
+  .fa-angle-double-down {
+    color: #a49146;
   }
 }
