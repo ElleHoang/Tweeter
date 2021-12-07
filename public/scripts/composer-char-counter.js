@@ -10,7 +10,7 @@ $(document).ready(function() {
     } else {
       $(".counter").removeClass("exceed-count").html(numOfChar);
     }
-    $(".counter").html(140);
+    $(".counter").html(numOfChar);
   });
   
 });
