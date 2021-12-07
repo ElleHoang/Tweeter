@@ -52,15 +52,15 @@ $(document).ready(function() {
       });
   };
   loadTweets();
-  
+
   $("#err-msg").hide();
   $("form").submit(function(event) {
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
-      return $("#err-msg").slideDown().find("p").text(`We can not see what you're humming about.`);
+      return $("#err-msg").slideDown().fadeOut(5000).find("p").text(`We can not see what you're humming about.`);
     }
     if ($("#tweet-text").val().length > 140) {
-      return $("#err-msg").slideDown().find("p").text(`Your humming is way too long.`);
+      return $("#err-msg").slideDown().fadeOut(5000).find("p").text(`Your humming is way too long.`);
     }
     const queryStr = $(this).serialize();
     console.log(queryStr);
