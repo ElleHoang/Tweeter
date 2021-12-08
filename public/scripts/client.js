@@ -76,13 +76,14 @@ $(document).ready(function() {
       return $("#err-msg").slideDown().fadeOut(5000).find("p").text(`Your humming is way too long.`);
     }
 
-    // convert form data into query strng serialized data
+    // convert form data into query string serialized data
     const queryStr = $(this).serialize();
     console.log(queryStr);
     $.ajax("/tweets", { type: "POST", data: queryStr})
       .then(function() {
         loadTweets();
         $("#tweet-text").val("");
+        $(".counter").html(140);
       });
   });
 });
